@@ -1,0 +1,31 @@
+$def with (username, password)
+<table align="center">
+    <tr>
+        <td>
+            <h1>Web-Python System</h1>
+        </td>
+    </tr>
+$if (username,password):
+    <tr>
+        <td>
+            Hello <em style="color:green; font-size:1em;">$username</em> !
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Welcome to Web-Python, your password is [ <em style="color:green; font-size:1em;">$password</em> ] !
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Have fun!!!     <a href="./hello">back<a/>
+        </td>
+    </tr>
+$else:
+    <tr>
+        <td>
+            <em>Hello</em>, Python!
+        </td>
+    </tr>
+</table>
+

@@ -1,0 +1,38 @@
+{% extends "wmn_base.html" %}
+
+{% block mainbody %}
+
+<table>
+    <tr>
+        <td>
+            <h3>Working Management System Login</h3>
+        </td>
+    </tr>
+    <form action="/wmn_login/" method="POST">
+        {% csrf_token %}
+        <tr>
+            <td>
+                Username: <input type="text" name="name"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password: <input type="password" name="password"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" value="Submit">Login</button>
+                <button type="reset" value="Reset">Reset</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{check_msg}}
+            </td>
+        </tr>
+    </form>
+</table>
+
+{% endblock %}
+
